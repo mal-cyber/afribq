@@ -1,0 +1,11 @@
+{% extends "amirs/index.html" %}
+
+{% block title %}Be a member{% endblock %}
+
+{% block content %}
+    <form method="POST" class="form-group">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit" class="btn btn-success">Submit</button>
+    </form>
+{% endblock %}
